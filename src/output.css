@@ -181,6 +181,15 @@
     border-style: var(--tw-border-style);
     border-width: 1px;
   }
+  .bg-\[\#050B21\] {
+    background-color: #050B21;
+  }
+  .bg-\[\#EBF4FD\] {
+    background-color: #EBF4FD;
+  }
+  .bg-\[EBF4FD\] {
+    background-color: EBF4FD;
+  }
   .bg-black {
     background-color: var(--color-black);
   }
@@ -201,6 +210,11 @@
   .outline {
     outline-style: var(--tw-outline-style);
     outline-width: 1px;
+  }
+  .dark\:bg-\[\#050B21\] {
+    @media (prefers-color-scheme: dark) {
+      background-color: #050B21;
+    }
   }
 }
 @property --tw-border-style {
