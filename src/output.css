@@ -9,9 +9,13 @@
       "Courier New", monospace;
     --color-green-400: oklch(79.2% 0.209 151.711);
     --color-black: #000;
+    --color-white: #fff;
+    --spacing: 0.25rem;
     --text-3xl: 1.875rem;
     --text-3xl--line-height: calc(2.25 / 1.875);
     --font-weight-bold: 700;
+    --radius-2xl: 1rem;
+    --radius-3xl: 1.5rem;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
   }
@@ -165,6 +169,9 @@
   .static {
     position: static;
   }
+  .mx-auto {
+    margin-inline: auto;
+  }
   .contents {
     display: contents;
   }
@@ -174,8 +181,20 @@
   .table {
     display: table;
   }
+  .w-50 {
+    width: calc(var(--spacing) * 50);
+  }
+  .w-75 {
+    width: calc(var(--spacing) * 75);
+  }
   .w-full {
     width: 100%;
+  }
+  .border-collapse {
+    border-collapse: collapse;
+  }
+  .resize {
+    resize: both;
   }
   .flex-row {
     flex-direction: row;
@@ -183,14 +202,51 @@
   .items-center {
     align-items: center;
   }
+  .justify-around {
+    justify-content: space-around;
+  }
   .justify-between {
     justify-content: space-between;
+  }
+  .rounded {
+    border-radius: 0.25rem;
+  }
+  .rounded-2xl {
+    border-radius: var(--radius-2xl);
+  }
+  .rounded-3xl {
+    border-radius: var(--radius-3xl);
+  }
+  .border {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
   }
   .bg-\[\#EBF4FD\] {
     background-color: #EBF4FD;
   }
   .bg-green-400 {
     background-color: var(--color-green-400);
+  }
+  .bg-white {
+    background-color: var(--color-white);
+  }
+  .px-2 {
+    padding-inline: calc(var(--spacing) * 2);
+  }
+  .px-5 {
+    padding-inline: calc(var(--spacing) * 5);
+  }
+  .px-\[5rem\] {
+    padding-inline: 5rem;
+  }
+  .py-3 {
+    padding-block: calc(var(--spacing) * 3);
+  }
+  .py-5 {
+    padding-block: calc(var(--spacing) * 5);
+  }
+  .underline {
+    text-decoration-line: underline;
   }
   .outline {
     outline-style: var(--tw-outline-style);
@@ -202,6 +258,11 @@
     }
   }
 }
+@property --tw-border-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
 @property --tw-outline-style {
   syntax: "*";
   inherits: false;
@@ -210,6 +271,7 @@
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
+      --tw-border-style: solid;
       --tw-outline-style: solid;
     }
   }
