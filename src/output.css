@@ -14,6 +14,7 @@
     --text-3xl: 1.875rem;
     --text-3xl--line-height: calc(2.25 / 1.875);
     --font-weight-bold: 700;
+    --radius-xl: 0.75rem;
     --radius-2xl: 1rem;
     --radius-3xl: 1.5rem;
     --default-font-family: var(--font-sans);
@@ -223,6 +224,9 @@
   .rounded-3xl {
     border-radius: var(--radius-3xl);
   }
+  .rounded-xl {
+    border-radius: var(--radius-xl);
+  }
   .border {
     border-style: var(--tw-border-style);
     border-width: 1px;
@@ -230,8 +234,14 @@
   .bg-\[\#050B21\] {
     background-color: #050B21;
   }
+  .bg-\[\#C6241A\] {
+    background-color: #C6241A;
+  }
   .bg-\[\#EBF4FD\] {
     background-color: #EBF4FD;
+  }
+  .bg-\[C6241A\] {
+    background-color: C6241A;
   }
   .bg-green-400 {
     background-color: var(--color-green-400);
