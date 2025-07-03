@@ -185,6 +185,9 @@
   .table {
     display: table;
   }
+  .h-screen {
+    height: 100vh;
+  }
   .w-50 {
     width: calc(var(--spacing) * 50);
   }
@@ -215,6 +218,12 @@
   .justify-between {
     justify-content: space-between;
   }
+  .justify-center {
+    justify-content: center;
+  }
+  .gap-5 {
+    gap: calc(var(--spacing) * 5);
+  }
   .rounded {
     border-radius: 0.25rem;
   }
@@ -223,6 +232,9 @@
   }
   .rounded-3xl {
     border-radius: var(--radius-3xl);
+  }
+  .rounded-full {
+    border-radius: calc(infinity * 1px);
   }
   .rounded-xl {
     border-radius: var(--radius-xl);
@@ -252,17 +264,29 @@
   .px-2 {
     padding-inline: calc(var(--spacing) * 2);
   }
+  .px-4 {
+    padding-inline: calc(var(--spacing) * 4);
+  }
   .px-5 {
     padding-inline: calc(var(--spacing) * 5);
   }
   .px-\[5rem\] {
     padding-inline: 5rem;
   }
+  .py-1 {
+    padding-block: calc(var(--spacing) * 1);
+  }
+  .py-2 {
+    padding-block: calc(var(--spacing) * 2);
+  }
   .py-3 {
     padding-block: calc(var(--spacing) * 3);
   }
   .py-5 {
     padding-block: calc(var(--spacing) * 5);
+  }
+  .text-white {
+    color: var(--color-white);
   }
   .underline {
     text-decoration-line: underline;
