@@ -11,3 +11,7 @@ function toggleTheme() {
 			'<img src="./assets/images/icon-moon.svg" alt="Moon Icon">';
 	}
 }
+
+document.addEventListener("DOMContentLoaded", toggleTheme);
+
+toggleBtn.addEventListener("click", toggleTheme);
