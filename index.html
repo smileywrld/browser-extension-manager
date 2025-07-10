@@ -4,7 +4,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Browser extensions manager UI</title>
+  <meta name="description"
+    content="A browser extensions manager UI designed to showcase a list of extensions with toggle functionality.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
@@ -23,7 +27,7 @@
   </header>
   <main class="w-full h-screen">
     <div class="flex lg:flex-row justify-around md:flex-col sm:flex-col sm:items-center">
-      <h2 class="text-2xl font-bold">Extension List</h2>
+      <h2 class="text-2xl font-bold dark:text-white">Extension List</h2>
 
       <div class="flex flex-row justify-center gap-5">
         <a href="#all" class="bg-[#C6241A] rounded-full text-white px-4 py-1">All</a>
@@ -32,7 +36,8 @@
       </div>
     </div>
 
-    <section id="card-container" class="grid grid-rows-4 grid-cols-3 gap-[2rem] mt-10 md:grid-cols-2 sm:grid-cols-1 lg:grid-cols-3">
+    <section id="card-container"
+      class="grid grid-rows-4 grid-cols-3 gap-[2rem] mt-10 md:grid-cols-2 sm:grid-cols-1 lg:grid-cols-3">
       <figure class="bg-white rounded-3xl p-5 shadow-lg mb-5 w-fit h-45 flex justify-center flex-col">
         <div class="flex gap-5 justify-around me-5 ">
           <div>
