@@ -10,3 +10,18 @@ body {
     background: rgb(31, 37, 54);
     color: rgb(237, 237, 237);
 }
+
+.remove {
+    background: transparent;
+    border: solid 2px #EBF4FD;
+    color: white;
+    transition: background 0.3s ease, color 0.3s ease;
+
+    &:hover {
+        background: #C6241A;
+        color: #050B21;
+        border: none;
+    }
+
+
+}
