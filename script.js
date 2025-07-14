@@ -1,7 +1,7 @@
 fetch("./data.json")
 	.then((response) => response.json())
 	.then((data) => {
-		const container = document.querySelector(".card-container");
+		const container = document.getElementById("card-container");
 
 		data.forEach((item) => {
 			const card = document.createElement("figure");
@@ -22,11 +22,11 @@ fetch("./data.json")
 			card.innerHTML = `
 		<div class="flex gap-5 justify-around me-5">
 			<div>
-			  <img src="${item.logo}" alt="${item.title}" class="w-25">
+			  <img src="${item.logo}" alt="${item.name}" class="w-25">
 			</div>
 			<div class="mb-5 mx-4">
-			  <h3 class="text-2xl font-bold">${item.title}</h3>
-			  <p>${item.desc}</p>
+			  <h3 class="text-2xl font-bold">${item.name}</h3>
+			  <p>${item.description}</p>
 			</div>
 		  </div>
 		  <div class="flex justify-between">
@@ -41,6 +41,9 @@ fetch("./data.json")
 
 			container.appendChild(card);
 		});
+	})
+	.catch((error) => {
+		console.error("Failed to load JSON:", error);
 	});
 
 const toggleBtn = document.querySelector(".toggle-btn");
