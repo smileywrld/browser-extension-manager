@@ -65,11 +65,13 @@ fetch("./data.json")
 			const card = document.createElement("figure");
 			card.classList.add(
 				"bg-white",
+				"lg:w-[80%]",
 				"rounded-3xl",
 				"p-5",
 				"shadow-lg",
 				"mb-5",
 				"w-screen",
+				"lg:w-[100%]",
 				"h-[100%]",
 				"flex",
 				"justify-center",
