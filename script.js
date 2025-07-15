@@ -69,7 +69,7 @@ fetch("./data.json")
 				"p-5",
 				"shadow-lg",
 				"mb-5",
-				"w-fit",
+				"w-screen",
 				"h-[100%]",
 				"flex",
 				"justify-center",
