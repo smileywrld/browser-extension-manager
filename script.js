@@ -87,8 +87,8 @@ fetch("./data.json")
 			  <p>${item.description}</p>
 			</div>
 		  </div>
-		  <div class="flex justify-between">
-			<a href="#" class="bg-[#EBF4FD] px-4 rounded-full hover:bg-[#C6241A] hover:text-white remove">Remove</a>
+		  <div class="flex justify-between items-center mt-5">
+			<a href="#" class="bg-[#EBF4FD] px-5 py-1 rounded-full hover:bg-[#C6241A] hover:text-white remove">Remove</a>
 			<label class="relative inline-flex items-center cursor-pointer">
 			 <input type="checkbox" class="sr-only peer" ${item.isActive ? "checked" : ""}>
 
