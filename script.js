@@ -100,13 +100,16 @@ fetch("./data.json")
 
 			container.appendChild(card);
 		});
+
+		const card = document.querySelector(".card");
+		// const removeBtn = card.querySelectorAll(".remove");
+		function hideCard() {
+			card.classList.add("hide-card");
+		}
+
+		card.addEventListener("click", hideCard);
 	})
+
 	.catch((error) => {
 		console.error("Failed to load JSON:", error);
 	});
-
-function hideCard() {
-	card.classList.add("hide-card");
-}
-
-remove.addEventListener("click", hideCard);
