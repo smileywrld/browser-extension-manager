@@ -6,6 +6,11 @@ const remove = document.querySelector(".remove");
 const toggler = document.querySelector(".toggler");
 const toggler2 = document.querySelector(".toggler-2");
 
+function hideCard() {
+	card.classList.add("hidden");
+}
+
+remove.addEventListener("click", hideCard);
 function darkMode() {
 	body.classList.toggle("dark");
 
