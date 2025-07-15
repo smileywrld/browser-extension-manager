@@ -1,3 +1,61 @@
+const body = document.body;
+const toggleBtn = document.querySelector(".toggle-btn");
+const heading = document.querySelector(".heading");
+const card = document.querySelector(".card");
+const remove = document.querySelector(".remove");
+const toggler = document.querySelector(".toggler");
+const toggler2 = document.querySelector(".toggler-2");
+
+function darkMode() {
+	body.classList.toggle("dark");
+
+	if (body.classList.contains("dark")) {
+		toggleBtn.innerHTML =
+			'<img src="assets/images/icon-moon.svg" alt="Moon Icon">';
+		heading.classList.add("text-white");
+
+		document.querySelectorAll(".card").forEach((card) => {
+			card.classList.add("card");
+		});
+
+		document.querySelectorAll(".remove").forEach((btn) => {
+			btn.classList.add("remove");
+		});
+
+		document.querySelectorAll(".toggler").forEach((toggler) => {
+			toggler.classList.add("toggler");
+		});
+
+		document.querySelectorAll(".toggler-2").forEach((toggler2) => {
+			toggler2.classList.add("toggler-2");
+		});
+	} else {
+		toggleBtn.innerHTML =
+			'<img src="assets/images/icon-sun.svg" alt="Sun Icon">';
+		heading.classList.remove("text-white");
+
+		document.querySelectorAll(".card").forEach((card) => {
+			card.classList.remove("card");
+		});
+
+		document.querySelectorAll(".remove").forEach((btn) => {
+			btn.classList.remove("remove");
+		});
+
+		document.querySelectorAll(".toggler").forEach((toggler) => {
+			toggler.classList.remove("toggler");
+		});
+
+		document.querySelectorAll(".toggler-2").forEach((toggler2) => {
+			toggler2.classList.remove("toggler-2");
+		});
+	}
+}
+
+document.addEventListener("DOMContentLoaded", darkMode);
+
+toggleBtn.addEventListener("click", darkMode);
+
 fetch("./data.json")
 	.then((response) => response.json())
 	.then((data) => {
@@ -32,7 +90,8 @@ fetch("./data.json")
 		  <div class="flex justify-between">
 			<a href="#" class="bg-[#EBF4FD] px-4 rounded-full hover:bg-[#C6241A] hover:text-white remove">Remove</a>
 			<label class="relative inline-flex items-center cursor-pointer">
-			  <input type="checkbox" class="sr-only peer">
+			 <input type="checkbox" class="sr-only peer" ${item.isActive ? "checked" : ""}>
+
 			  <div class="w-11 h-6 bg-gray-300 rounded-full peer peer-checked:bg-[#C6241A] peer-focus:ring-2 ring-blue-500 transition-all duration-300"></div>
 			  <div class="absolute left-1 top-1 w-4 h-4 bg-white rounded-full transition-all duration-300 peer-checked:translate-x-full"></div>
 			</label>
@@ -45,36 +104,3 @@ fetch("./data.json")
 	.catch((error) => {
 		console.error("Failed to load JSON:", error);
 	});
-
-const toggleBtn = document.querySelector(".toggle-btn");
-const body = document.body;
-const heading = document.querySelector(".heading");
-const card = document.querySelector(".card");
-const remove = document.querySelector(".remove");
-const toggler = document.querySelector(".toggler");
-const toggler2 = document.querySelector(".toggler-2");
-
-function darkMode() {
-	body.classList.toggle("dark");
-	if (body.classList.contains("dark")) {
-		toggleBtn.innerHTML =
-			'<img src="assets/images/icon-moon.svg" alt="Moon Icon">';
-		heading.classList.add("text-white");
-		card.classList.add("card");
-		remove.classList.add("remove");
-		toggler.classList.add("toggler");
-		toggler2.classList.add("toggler-2");
-	} else {
-		toggleBtn.innerHTML =
-			'<img src="assets/images/icon-sun.svg" alt="Sun Icon">';
-		heading.classList.remove("text-white");
-		card.classList.remove("card");
-		remove.classList.remove("remove");
-		toggler.classList.remove("toggler");
-		toggler2.classList.remove("toggler-2");
-	}
-}
-
-document.addEventListener("DOMContentLoaded", darkMode);
-
-toggleBtn.addEventListener("click", darkMode);
