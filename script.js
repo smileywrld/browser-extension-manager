@@ -105,9 +105,6 @@ fetch("./data.json")
 
 		const card = document.querySelector(".card");
 		// const removeBtn = card.querySelectorAll(".remove");
-		function hideCard() {
-			card.classList.add("hide-card");
-		}
 
 		card.addEventListener("click", (e) => {
 			e.preventDefault();
