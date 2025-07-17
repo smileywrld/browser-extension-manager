@@ -103,15 +103,14 @@ fetch("./data.json")
 			container.appendChild(card);
 		});
 
-		const card = document.querySelector(".card");
-		// const removeBtn = card.querySelectorAll(".remove");
-
-		card.addEventListener("click", (e) => {
-			e.preventDefault();
-			if (e.target.classList.contains("remove")) {
-				card.classList.add("hide-card");
-			});
-	})
+		// const card = document.querySelector(".card");
+		// // const removeBtn = card.querySelectorAll(".remove");
+		// card.addEventListener("click", (e) => {
+		// 	e.preventDefault();
+		// 	if (e.target.classList.contains("remove")) {
+		// 		card.classList.add("hide-card");
+		// 	}
+		// });
 
 	.catch((error) => {
 		console.error("Failed to load JSON:", error);
