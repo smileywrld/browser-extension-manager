@@ -109,7 +109,10 @@ fetch("./data.json")
 			card.classList.add("hide-card");
 		}
 
-		card.addEventListener("click", hideCard);
+		card.addEventListener("click", (e) => {
+			e.preventDefault();
+			
+		});
 	})
 
 	.catch((error) => {
