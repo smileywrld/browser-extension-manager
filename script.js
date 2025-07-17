@@ -109,9 +109,8 @@ fetch("./data.json")
 		card.addEventListener("click", (e) => {
 			e.preventDefault();
 			if (e.target.classList.contains("remove")) {
-				hideCard();
-			}
-		});
+				card.classList.add("hide-card");
+			});
 	})
 
 	.catch((error) => {
