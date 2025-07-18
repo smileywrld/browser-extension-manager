@@ -37,10 +37,13 @@ body {
 }
 
 .attribution {
-    font-size: 11px;
+    font-size: 16px;
     text-align: center;
+    color: #EBF4FD;
 }
 
 .attribution a {
     color: hsl(228, 45%, 44%);
+    display: inline-block;
+
 }
