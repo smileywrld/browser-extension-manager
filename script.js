@@ -103,6 +103,7 @@ fetch("./data.json")
 			const remove = card.querySelector(".remove");
 			remove.addEventListener("click", (e) => {
 				e.preventDefault();
+				
 				card.remove();
 			});
 
