@@ -100,12 +100,16 @@ fetch("./data.json")
 		  </div>
 		`;
 
+			remove.addEventListener("click", (e) => {
+				e.preventDefault();
+				card.remove();
+			});
+
 			container.appendChild(card);
 		});
 
 		const card = document.querySelector(".card");
-		// const removeBtn = card.querySelectorAll(".remove");
-		})
+	})
 
 	.catch((error) => {
 		console.error("Failed to load JSON:", error);
