@@ -99,7 +99,8 @@ fetch("./data.json")
 			</label>
 		  </div>
 		`;
-
+			// const card = document.querySelector(".card");
+			const remove = card.querySelector(".remove");
 			remove.addEventListener("click", (e) => {
 				e.preventDefault();
 				card.remove();
@@ -107,8 +108,6 @@ fetch("./data.json")
 
 			container.appendChild(card);
 		});
-
-		const card = document.querySelector(".card");
 	})
 
 	.catch((error) => {
