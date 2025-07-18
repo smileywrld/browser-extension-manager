@@ -2,54 +2,54 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
 
-  <title>Frontend Mentor | Browser extensions manager UI</title>
-  <meta name="description"
-    content="A browser extensions manager UI designed to showcase a list of extensions with toggle functionality.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <link href="./src/output.css" rel="stylesheet">
+    <title>Frontend Mentor | Browser extensions manager UI</title>
+    <meta name="description"
+        content="A browser extensions manager UI designed to showcase a list of extensions with toggle functionality.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link href="./src/output.css" rel="stylesheet">
 
 </head>
 
 <body class="bg-[#EBF4FD] px-3 md:px-[2rem] lg:px-[5rem] transition-colors duration-300">
-  <header class="w-full py-5">
-    <nav class="flex flex-row bg-white justify-around items-center w-full mx-auto rounded-3xl py-4">
-      <img src="./assets/images/logo.svg" alt="Logo" class="logo">
+    <header class="w-full py-5">
+        <nav class="flex flex-row bg-white justify-around items-center w-full mx-auto rounded-3xl py-4">
+            <img src="./assets/images/logo.svg" alt="Logo" class="logo">
 
-      <div>
-        <a href="#theme-toggle" class="toggle-btn"><img src="./assets/images/icon-moon.svg" alt="Moon Icon"></a>
-      </div>
-    </nav>
-  </header>
-  <main class="w-full h-screen">
-    <div
-      class="flex flex-col justify-around md:flex-col sm:flex-col items-center lg:flex-row lg:justify-between lg:items-start">
-      <h2 class="text-2xl font-bold heading">Extension List</h2>
+            <div>
+                <a href="#theme-toggle" class="toggle-btn"><img src="./assets/images/icon-moon.svg" alt="Moon Icon"></a>
+            </div>
+        </nav>
+    </header>
+    <main class="w-full h-screen">
+        <div
+            class="flex flex-col justify-around md:flex-col sm:flex-col items-center lg:flex-row lg:justify-between lg:items-start">
+            <h2 class="text-2xl font-bold heading">Extension List</h2>
 
-      <div class="flex flex-row justify-center gap-6">
-        <a href="#all" class="bg-[#C6241A] rounded-full text-white px-4 py-1">All</a>
-        <a href="active.html" class="bg-white rounded-full px-4 py-1">Active</a>
-        <a href="inactive.html" class="bg-white rounded-full px-4 py-1">Inactive</a>
-      </div>
-    </div>
+            <div class="flex flex-row justify-center gap-6">
+                <a href="#all" class="bg-[#C6241A] rounded-full text-white px-4 py-1">All</a>
+                <a href="active.html" class="bg-white rounded-full px-4 py-1">Active</a>
+                <a href="inactive.html" class="bg-white rounded-full px-4 py-1">Inactive</a>
+            </div>
+        </div>
 
-    <section id="card-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[2rem] mt-10">
-    </section>
-    <div class="attribution mt-5 ">
-      <p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.</p>
-      Coded by <a href="">Ismail Jimoh</a>.
-    </div>
-  </main>
+        <section id="card-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[2rem] mt-10">
+        </section>
+        <div class="attribution mt-5 ">
+            <p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.</p>
+            Coded by <a href="">Ismail Jimoh</a>.
+        </div>
+    </main>
 
 
-  <script src="./script.js"></script>
+    <script src="./script.js" data-mode="active"></script>
 </body>
 
 </html>
