@@ -60,8 +60,14 @@ fetch("./data.json")
 	.then((response) => response.json())
 	.then((data) => {
 		const container = document.getElementById("card-container");
-		const activeItems = data.filter((item) => item.isActive);
-		activeItems.forEach((item) => {
+		const isActivePage = window.location.pathname.includes("active.html");
+		let filteredItems;
+		if (isActivePage) {
+			filteredItems = data.filter((item) => item.isActive);
+		} else {
+			filteredItems = data.filter((item) => !item.isActive);
+		}
+		filteredItems.forEach((item) => {
 			const card = document.createElement("figure");
 			card.classList.add(
 				"bg-white",
