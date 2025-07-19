@@ -60,8 +60,8 @@ fetch("./data.json")
 	.then((response) => response.json())
 	.then((data) => {
 		const container = document.getElementById("card-container");
-
-		data.forEach((item) => {
+		const activeItems = data.filter((item) => item.isActive);
+		activeItems.forEach((item) => {
 			const card = document.createElement("figure");
 			card.classList.add(
 				"bg-white",
