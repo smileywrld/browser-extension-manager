@@ -13,41 +13,15 @@ function darkMode() {
 		toggleBtn.innerHTML =
 			'<img src="assets/images/icon-moon.svg" alt="Moon Icon">';
 		heading.classList.add("text-white");
-
 		document.querySelectorAll(".card").forEach((card) => {
-			card.classList.add("card");
-		});
-
-		document.querySelectorAll(".remove").forEach((btn) => {
-			btn.classList.add("remove");
-		});
-
-		document.querySelectorAll(".toggler").forEach((toggler) => {
-			toggler.classList.add("toggler");
-		});
-
-		document.querySelectorAll(".toggler-2").forEach((toggler2) => {
-			toggler2.classList.add("toggler-2");
+			card.classList.add("dark-card"); // Add a dark-mode-specific class
 		});
 	} else {
 		toggleBtn.innerHTML =
 			'<img src="assets/images/icon-sun.svg" alt="Sun Icon">';
 		heading.classList.remove("text-white");
-
 		document.querySelectorAll(".card").forEach((card) => {
-			card.classList.remove("card");
-		});
-
-		document.querySelectorAll(".remove").forEach((btn) => {
-			btn.classList.remove("remove");
-		});
-
-		document.querySelectorAll(".toggler").forEach((toggler) => {
-			toggler.classList.remove("toggler");
-		});
-
-		document.querySelectorAll(".toggler-2").forEach((toggler2) => {
-			toggler2.classList.remove("toggler-2");
+			card.classList.remove("dark-card"); // Remove dark-mode-specific class
 		});
 	}
 }
@@ -75,8 +49,7 @@ fetch("./data.json")
 				"h-[100%]",
 				"flex",
 				"justify-center",
-				"flex-col",
-				"card"
+				"flex-col"
 			);
 
 			card.innerHTML = `
