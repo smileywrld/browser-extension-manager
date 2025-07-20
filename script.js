@@ -14,14 +14,16 @@ function darkMode() {
 			'<img src="assets/images/icon-moon.svg" alt="Moon Icon">';
 		heading.classList.add("text-white");
 		document.querySelectorAll(".card").forEach((card) => {
-			card.classList.add("dark"); // Add a dark-mode-specific class
+			card.classList.add("dark-mode"); // Add a dark class
+			console.log("It worked");
 		});
 	} else {
 		toggleBtn.innerHTML =
 			'<img src="assets/images/icon-sun.svg" alt="Sun Icon">';
 		heading.classList.remove("text-white");
 		document.querySelectorAll(".card").forEach((card) => {
-			card.classList.remove("dark"); // Remove dark-mode-specific class
+			card.classList.remove("dark-mode"); // Remove dark-mode-specific class
+			console.log("It didnt worked");
 		});
 	}
 }
@@ -38,7 +40,6 @@ fetch("./data.json")
 		data.forEach((item) => {
 			const card = document.createElement("figure");
 			card.classList.add(
-				"bg-white",
 				"lg:w-[80%]",
 				"rounded-3xl",
 				"p-5",

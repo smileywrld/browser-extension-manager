@@ -3,7 +3,11 @@ body {
 }
 
 .dark {
-    background-color: #050B21;
+    background: #050B21;
+}
+
+.dark-mode {
+    background: #050B21;
 }
 
 .card {
