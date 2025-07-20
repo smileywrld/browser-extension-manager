@@ -14,14 +14,14 @@ function darkMode() {
 			'<img src="assets/images/icon-moon.svg" alt="Moon Icon">';
 		heading.classList.add("text-white");
 		document.querySelectorAll(".card").forEach((card) => {
-			card.classList.add("dark-card"); // Add a dark-mode-specific class
+			card.classList.add("dark"); // Add a dark-mode-specific class
 		});
 	} else {
 		toggleBtn.innerHTML =
 			'<img src="assets/images/icon-sun.svg" alt="Sun Icon">';
 		heading.classList.remove("text-white");
 		document.querySelectorAll(".card").forEach((card) => {
-			card.classList.remove("dark-card"); // Remove dark-mode-specific class
+			card.classList.remove("dark"); // Remove dark-mode-specific class
 		});
 	}
 }
